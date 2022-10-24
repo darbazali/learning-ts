@@ -19,3 +19,7 @@ const printFormat = (title: string, param: string | number): void => {
 }
 
 printFormat("Killer", "Whale")
+
+const fetchData = (url: string) => Promise.resolve(`Data from ${url}`)
+
+fetchData("api/v1/items").then((res) => console.log(res))
