@@ -13,3 +13,9 @@ const format = (title: string, param: string | number): string =>
     `${title} ${param}`
 
 console.log(format("Hunter", 2))
+
+const printFormat = (title: string, param: string | number): void => {
+    console.log(format(title, param))
+}
+
+printFormat("Killer", "Whale")
