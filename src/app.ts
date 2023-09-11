@@ -2,8 +2,14 @@ const { log, clear } = console
 
 clear()
 
-let a: number = 12
-let b: number = 6
+let firstName: string = 'Mac'
+firstName = 'Max'
 
+const isLoading: boolean = false
+const postID: string | number  = 22
 
-log(a / b) 
+const sum = (a: number, b: number): number => a + b
+
+const re: RegExp = /\S/g
+
+log(typeof re)
