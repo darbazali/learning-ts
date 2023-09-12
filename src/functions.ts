@@ -34,3 +34,4 @@ const addAll = (a: number, b: number, c?: number): number => {
 }
 
 console.log(addAll(1, 2, 3));
+ 
