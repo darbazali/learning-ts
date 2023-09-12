@@ -23,3 +23,14 @@ console.log(subtract(6, 2));
 const multiply: MathFunction = (a, b) => a * b 
 
 console.log(multiply(5, 5))
+
+
+// Optional Paramerters
+const addAll = (a: number, b: number, c?: number): number => {
+    if (typeof c !== 'undefined') {
+        return a + b + c
+    }
+    return a + b
+}
+
+console.log(addAll(1, 2, 3));
