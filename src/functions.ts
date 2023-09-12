@@ -1,37 +1,35 @@
 // functions in ts
-const greet = (name: string): string => `Hi ${name}`
+const greet = (name: string): string => `Hi ${name}`;
 
-console.log(greet('Max'))
+console.log(greet("Max"));
 
-
-type MathFunction = (a: number, b: number) => number
+type MathFunction = (a: number, b: number) => number;
 
 // interface MathFunction {
 //     (a: number, b: number): number
 // }
 
-const add: MathFunction = (a, b) => a + b 
+const add: MathFunction = (a, b) => a + b;
 
-console.log(add(9,9));
+console.log(add(9, 9));
 
-
-const subtract: MathFunction = (a, b) => a - b 
+const subtract: MathFunction = (a, b) => a - b;
 
 console.log(subtract(6, 2));
 
+const multiply: MathFunction = (a, b) => a * b;
 
-const multiply: MathFunction = (a, b) => a * b 
-
-console.log(multiply(5, 5))
-
+console.log(multiply(5, 5));
 
 // Optional Paramerters
 const addAll = (a: number, b: number, c?: number): number => {
-    if (typeof c !== 'undefined') {
-        return a + b + c
-    }
-    return a + b
-}
+  if (typeof c !== "undefined") {
+    return a + b + c;
+  }
+  return a + b;
+};
 
 console.log(addAll(1, 2, 3));
- 
+
+// Default Param
+const sumAll = (a: number, b: number, c: number = 2): number => a + b + c;

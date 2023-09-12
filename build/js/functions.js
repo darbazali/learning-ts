@@ -1,7 +1,7 @@
 "use strict";
 // functions in ts
 const greet = (name) => `Hi ${name}`;
-console.log(greet('Max'));
+console.log(greet("Max"));
 // interface MathFunction {
 //     (a: number, b: number): number
 // }
@@ -13,9 +13,11 @@ const multiply = (a, b) => a * b;
 console.log(multiply(5, 5));
 // Optional Paramerters
 const addAll = (a, b, c) => {
-    if (typeof c !== 'undefined') {
+    if (typeof c !== "undefined") {
         return a + b + c;
     }
     return a + b;
 };
 console.log(addAll(1, 2, 3));
+// Default Param
+const sumAll = (a, b, c = 2) => a + b + c;
