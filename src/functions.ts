@@ -1,7 +1,10 @@
 // functions in ts
+const { log, clear } = console;
+clear(); // clear console before each run
+
 const greet = (name: string): string => `Hi ${name}`;
 
-console.log(greet("Max"));
+log(greet("Max"));
 
 type MathFunction = (a: number, b: number) => number;
 
@@ -11,15 +14,15 @@ type MathFunction = (a: number, b: number) => number;
 
 const add: MathFunction = (a, b) => a + b;
 
-console.log(add(9, 9));
+log(add(9, 9));
 
 const subtract: MathFunction = (a, b) => a - b;
 
-console.log(subtract(6, 2));
+log(subtract(6, 2));
 
 const multiply: MathFunction = (a, b) => a * b;
 
-console.log(multiply(5, 5));
+log(multiply(5, 5));
 
 // Optional Paramerters
 const addAll = (a: number, b: number, c?: number): number => {
@@ -29,7 +32,13 @@ const addAll = (a: number, b: number, c?: number): number => {
   return a + b;
 };
 
-console.log(addAll(1, 2, 3));
+log(addAll(1, 2, 3));
 
 // Default Param
 const sumAll = (a: number, b: number, c: number = 2): number => a + b + c;
+
+// Rest Params
+const total = (a: number, ...nums: number[]): number =>
+  a + nums.reduce((prev, curr) => prev + curr);
+
+log(total(10, 2, 3));
