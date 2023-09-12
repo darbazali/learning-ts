@@ -26,3 +26,8 @@ const sumAll = (a, b, c = 2) => a + b + c;
 // Rest Params
 const total = (a, ...nums) => a + nums.reduce((prev, curr) => prev + curr);
 log(total(10, 2, 3));
+// Custom Type Gruads
+const isNumber = (value) => typeof value === "number" && !Number.isNaN(value);
+log(isNumber("22"));
+log(isNumber(22));
+log(isNumber(NaN));

@@ -42,3 +42,11 @@ const total = (a: number, ...nums: number[]): number =>
   a + nums.reduce((prev, curr) => prev + curr);
 
 log(total(10, 2, 3));
+
+// Custom Type Gruads
+const isNumber = (value: any): boolean =>
+  typeof value === "number" && !Number.isNaN(value);
+
+log(isNumber("22"));
+log(isNumber(22));
+log(isNumber(NaN));
